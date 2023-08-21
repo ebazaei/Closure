@@ -46,3 +46,16 @@ addTen(5); //5+10 =15
 var res = createAdder(8)(6);  //8+6 = 14
 
 console.log(res);
+
+
+
+//-------------------------
+
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter;}
+})();
+
+function myFunction(){
+  document.getElementById("demo").innerHTML = add();
+}
